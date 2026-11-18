@@ -1,0 +1,15 @@
+[package]
+name = "smart-disk-cleaner"
+version = "0.1.0"
+edition = "2024"
+description = "Scan developer folders for generated files and remove them with confirmation"
+license = "Apache-2.0"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
